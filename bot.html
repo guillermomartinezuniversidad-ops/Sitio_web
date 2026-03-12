@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT — Botánica | Guillermo Martínez Godoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .subject-hero { background:var(--bg-glass); border:1px solid var(--border-glass); border-radius:20px; padding:3rem; margin-bottom:3rem; display:flex; align-items:center; gap:2rem; }
+        .subject-badge { font-family:var(--font-display); font-size:4rem; font-weight:900; color:var(--accent); min-width:120px; text-align:center; background:var(--accent-dim); border-radius:16px; padding:1rem; border:1px solid rgba(74,222,128,0.2); }
+        .subject-hero h2 { font-family:var(--font-display); font-size:1.8rem; margin-bottom:0.5rem; }
+        .subject-hero p { color:var(--text-muted); font-size:0.95rem; max-width:600px; }
+        .topics-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:2rem; }
+        .topic-chip { background:rgba(74,222,128,0.06); border:1px solid rgba(74,222,128,0.15); border-radius:10px; padding:0.8rem 1rem; font-size:0.88rem; color:var(--text-muted); display:flex; align-items:center; gap:0.5rem; }
+        .topic-chip::before { content:'▸'; color:var(--accent); font-size:0.7rem; }
+        .subject-nav { display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:2.5rem; }
+        .subject-nav a { background:var(--bg-glass); border:1px solid var(--border-glass); color:var(--text-muted); padding:0.45rem 1.1rem; border-radius:50px; font-size:0.85rem; text-decoration:none; transition:var(--transition); }
+        .subject-nav a:hover,.subject-nav a.active { background:var(--accent-dim); border-color:rgba(74,222,128,0.3); color:var(--accent); }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html" class="logo">gamagod<span>i.a.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle active">Asignaturas</a>
+                <div class="dropdown-menu">
+                    <a href="epa.html">EPA — Elaboración de Proyectos</a>
+                    <a href="bot.html">BOT — Botánica</a>
+                    <a href="bsi.html">BSI — Botánica Sistemática</a>
+                    <a href="fve.html">FVE — Fisiología Vegetal</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Otros</a>
+                <div class="dropdown-menu">
+                    <a href="cursos.html">Cursos</a>
+                    <a href="tesis.html">Tesis</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="page-wrapper">
+    <div class="container animate">
+        <h2 class="section-title"><span>Asignaturas</span></h2>
+        <p class="section-sub">Carrera de Ingeniería Agronómica · Universidad Columbia del Paraguay</p>
+        <div class="subject-nav">
+            <a href="epa.html">EPA</a>
+            <a href="bot.html" class="active">BOT</a>
+            <a href="bsi.html">BSI</a>
+            <a href="fve.html">FVE</a>
+        </div>
+        <div class="subject-hero">
+            <div class="subject-badge">BOT</div>
+            <div>
+                <h2>Botánica</h2>
+                <p>Carrera de Ingeniería Agronómica · Universidad Columbia del Paraguay (2015 – 2025)</p>
+                <p style="margin-top:0.5rem;">Estudio de la estructura, función y diversidad de los vegetales. Base fundamental para las ciencias agronómicas y la comprensión de los sistemas productivos.</p>
+            </div>
+        </div>
+        <div class="topics-grid">
+            <div class="topic-chip">Célula vegetal</div>
+            <div class="topic-chip">Tejidos vegetales</div>
+            <div class="topic-chip">Morfología de raíz, tallo y hoja</div>
+            <div class="topic-chip">Flor, fruto y semilla</div>
+            <div class="topic-chip">Reproducción vegetal</div>
+            <div class="topic-chip">Ciclos biológicos</div>
+            <div class="topic-chip">Botánica económica</div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Guillermo Antonio Martínez Godoy · Ing. Agr. Mag. · <a href="mailto:guillermo.martinez.universidad@gmail.com">guillermo.martinez.universidad@gmail.com</a> · Asunción, Paraguay</p>
+</footer>
+</body>
+</html>

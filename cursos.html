@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos | Guillermo Martínez Godoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .otros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .otros-nav {
+            display: flex;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+        .otros-nav a {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            padding: 0.45rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .otros-nav a:hover, .otros-nav a.active {
+            background: var(--accent-dim);
+            border-color: rgba(74,222,128,0.3);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">gamagod<span>i.a.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Asignaturas</a>
+                <div class="dropdown-menu">
+                    <a href="epa.html">EPA — Elaboración de Proyectos</a>
+                    <a href="bot.html">BOT — Botánica</a>
+                    <a href="bsi.html">BSI — Botánica Sistemática</a>
+                    <a href="fve.html">FVE — Fisiología Vegetal</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle active">Otros</a>
+                <div class="dropdown-menu">
+                    <a href="cursos.html">Cursos</a>
+                    <a href="tesis.html">Tesis</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="page-wrapper">
+    <div class="container animate">
+        <h2 class="section-title"><span>Otros</span></h2>
+        <p class="section-sub">Cursos de actualización y actividades complementarias.</p>
+
+        <div class="otros-nav">
+            <a href="cursos.html" class="active">Cursos</a>
+            <a href="tesis.html">Tesis</a>
+        </div>
+
+        <div class="otros-grid">
+            <div class="card">
+                <span class="card-label">2025</span>
+                <h3>Diseño y Evaluación Social de Proyectos</h3>
+                <p>Banco de Desarrollo de América Latina · 120 horas</p>
+            </div>
+            <div class="card">
+                <span class="card-label">2025</span>
+                <h3>Introducción a las Finanzas Rurales para la Agricultura Familiar</h3>
+                <p>FAO / Naciones Unidas · 20 horas</p>
+            </div>
+            <div class="card">
+                <span class="card-label">2024</span>
+                <h3>Artificial Intelligence Fundamentals</h3>
+                <p>IBM SkillsBuild · 12 horas</p>
+            </div>
+            <div class="card">
+                <span class="card-label">2024</span>
+                <h3>IA Responsable y Prompt Engineering</h3>
+                <p>Founderz, España</p>
+            </div>
+            <div class="card">
+                <span class="card-label">Acreditación</span>
+                <h3>Acreditación ANEAES — Carrera de Ingeniería Agronómica UCP</h3>
+                <p>Coordinador del Comité de Autoevaluación, Dimensión 1 Gobernanza · 2022–2023</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Guillermo Antonio Martínez Godoy · Ing. Agr. Mag. · <a href="mailto:guillermo.martinez.universidad@gmail.com">guillermo.martinez.universidad@gmail.com</a> · Asunción, Paraguay</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guillermo Martínez Godoy | Docente Universitario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        #sec-inicio {
+            min-height: 100vh;
+            padding-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+        }
+        .hero-text h1 em { font-style: normal; color: var(--accent); }
+
+        .hero-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 480px;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .stats-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.2rem;
+            background: rgba(74,222,128,0.04);
+            border-radius: 12px;
+            border: 1px solid rgba(74,222,128,0.1);
+        }
+        .stat .num {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+        }
+        .stat .label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+            .stats-card { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">gamagod<span>i.a.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Asignaturas</a>
+                <div class="dropdown-menu">
+                    <a href="epa.html">EPA — Elaboración de Proyectos</a>
+                    <a href="bot.html">BOT — Botánica</a>
+                    <a href="bsi.html">BSI — Botánica Sistemática</a>
+                    <a href="fve.html">FVE — Fisiología Vegetal</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Otros</a>
+                <div class="dropdown-menu">
+                    <a href="cursos.html">Cursos</a>
+                    <a href="tesis.html">Tesis</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section id="sec-inicio" class="animate">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>Enseñar es <em>sembrar</em> conocimiento.</h1>
+            <p>Profesional y docente superior enfocado en transformar el agro paraguayo mediante la formación y el desarrollo de personas y comunidades.</p>
+            <div class="hero-tags">
+                <span class="tag">Ing. Agr.</span>
+                <span class="tag">MEd.</span>
+                <span class="tag">MagB</span>
+                <span class="tag">Investigación y tutoría</span>
+            </div>
+            <div class="hero-btns">
+                <a href="acerca.html" class="btn-primary">Conocer más</a>
+                <a href="mailto:guillermo.martinez.universidad@gmail.com" class="btn-ghost">✉ Contacto</a>
+            </div>
+        </div>
+        <div class="stats-card">
+            <div class="stat"><span class="num">10+</span><span class="label">Años docente</span></div>
+            <div class="stat"><span class="num">49</span><span class="label">Tesis evaluadas</span></div>
+            <div class="stat"><span class="num">4</span><span class="label">Asignaturas</span></div>
+            <div class="stat"><span class="num">2</span><span class="label">Maestrías</span></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Guillermo Antonio Martínez Godoy · Ing. Agr. Mag. · <a href="mailto:guillermo.martinez.universidad@gmail.com">guillermo.martinez.universidad@gmail.com</a> · Asunción, Paraguay</p>
+</footer>
+
+</body>
+</html>

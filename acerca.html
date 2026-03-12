@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de mí | Guillermo Martínez Godoy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-info-block {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-info-block h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .about-info-block p, .about-info-block li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .about-info-block ul { padding-left: 1.2rem; }
+
+        .timeline { position: relative; }
+        .tl-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+        .tl-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 6px;
+            flex-shrink: 0;
+            box-shadow: 0 0 8px var(--accent-glow);
+        }
+        .tl-line {
+            position: absolute;
+            left: 5px;
+            top: 18px;
+            bottom: -18px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            opacity: 0.2;
+        }
+        .tl-content h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; }
+        .tl-content .tl-date { font-size: 0.78rem; color: var(--accent); margin-bottom: 0.4rem; }
+        .tl-content p { font-size: 0.88rem; color: var(--text-muted); }
+
+        .quote-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .quote-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border-left: 3px solid var(--accent);
+            transition: var(--transition);
+        }
+        .quote-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-3px); }
+        .quote-card p { font-size: 0.9rem; color: var(--text-muted); font-style: italic; }
+
+        .premise-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .premise-card::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 8rem;
+            color: var(--accent);
+            opacity: 0.06;
+            position: absolute;
+            top: -1.5rem;
+            left: 1rem;
+            line-height: 1;
+        }
+        .premise-card blockquote {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+        .premise-card .cite { font-size: 0.82rem; color: var(--accent); }
+        .premise-card p { font-size: 0.92rem; color: var(--text-muted); margin-top: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .quote-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">gamagod<span>i.a.</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html" class="active">Acerca de</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Asignaturas</a>
+                <div class="dropdown-menu">
+                    <a href="epa.html">EPA — Elaboración de Proyectos</a>
+                    <a href="bot.html">BOT — Botánica</a>
+                    <a href="bsi.html">BSI — Botánica Sistemática</a>
+                    <a href="fve.html">FVE — Fisiología Vegetal</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Otros</a>
+                <div class="dropdown-menu">
+                    <a href="cursos.html">Cursos</a>
+                    <a href="tesis.html">Tesis</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="page-wrapper">
+    <div class="container animate">
+        <h2 class="section-title">Acerca <span>de mí</span></h2>
+        <p class="section-sub">Ingeniero Agrónomo, Magíster, docente y eterno aprendiz.</p>
+
+        <div class="about-grid">
+            <!-- Columna izquierda -->
+            <div>
+                <div class="about-info-block">
+                    <h3>👤 Quién soy</h3>
+                    <p>Me llamo Guillermo. Soy hijo de Aníbal y Cristina, hermano de David, Lilian, Fernando y Rocío, y esposo de Laura. Entre otras actividades, soy Docente en Educación Superior en la carrera de Ingeniería Agronómica.</p>
+                </div>
+
+                <div class="about-info-block">
+                    <h3>📬 Contacto</h3>
+                    <ul>
+                        <li>guillermo.martinez.universidad@gmail.com</li>
+                        <li>guillermo.martinez2@usc.edu.py</li>
+                        <li>guillermo.martinez@posgradocolumbia.edu.py</li>
+                        <li style="margin-top:0.5rem;">
+                            <a href="https://cv.conacyt.gov.py/publicar/cv?id=83a45b2b99c8dbe30980bf80b687386b" target="_blank" style="color:var(--accent)">CVPY</a>
+                            &nbsp;·&nbsp;
+                            <a href="https://orcid.org/0009-0005-2198-1981" target="_blank" style="color:var(--accent)">ORCID</a>
+                            &nbsp;·&nbsp;
+                            <a href="https://scholar.google.com/citations?hl=es&user=FQ2nERsAAAAJ" target="_blank" style="color:var(--accent)">Google Scholar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna derecha -->
+            <div>
+                <p style="color:var(--text-muted); margin-bottom:1.5rem; font-size:0.95rem;">Quienes fueron mis alumnos han dicho que soy…</p>
+                <div class="quote-grid">
+                    <div class="quote-card"><p>…un profesor que siempre escucha y con quien da gusto aprender.</p></div>
+                    <div class="quote-card"><p>…un tipo alegre, bromista, que busca formas de hacernos entender.</p></div>
+                    <div class="quote-card"><p>…alguien que presenta sus clases de forma única, que innova y favorece la participación.</p></div>
+                    <div class="quote-card"><p>…alguien que enseña con carisma, calidad y practicidad, y que ayuda a aclarar dudas de otras materias.</p></div>
+                </div>
+
+                <div class="premise-card">
+                    <blockquote>"No entiendes algo lo suficientemente mientras no seas capaz de explicárselo a la primera persona que pase por la calle."</blockquote>
+                    <span class="cite">— Gergonne (1825)</span>
+                    <p>Bajo este postulado, planifico, reviso y desarrollo mis clases y todos los materiales de apoyo para que sean comprensibles para la mayoría.</p>
+                </div>
+
+                <div class="premise-card">
+                    <blockquote>"Apunta a la luna y llegarás a la cima del árbol más alto."</blockquote>
+                    <span class="cite">— Herbert en Beatrice (1859)</span>
+                    <p>Mi esfuerzo está enfocado en una planeación coherente, como si todo dependiese de mí, para luego entregarme a resultados que no dependen únicamente de mí. Tras evaluar los logros, solo queda una cosa: mejorar aún más.</p>
+                </div>
+
+                <div style="margin-top:2.5rem;">
+                    <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.2rem; text-transform:uppercase; letter-spacing:0.8px; font-weight:600;">Formación académica destacada</p>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div><div class="tl-dot"></div><div class="tl-line"></div></div>
+                            <div class="tl-content">
+                                <div class="tl-date">2019–2023</div>
+                                <h4>Maestría en Administración de Agronegocios (MAGRO)</h4>
+                                <p>Universidad Columbia del Paraguay · Plan de negocios para producción de pimientos bajo invernadero.</p>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div><div class="tl-dot"></div><div class="tl-line"></div></div>
+                            <div class="tl-content">
+                                <div class="tl-date">2021–2022</div>
+                                <h4>Maestría en Ciencia de la Educación</h4>
+                                <p>Universidad Columbia del Paraguay · Propuesta de orientación en investigación agropecuaria.</p>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div><div class="tl-dot"></div><div class="tl-line"></div></div>
+                            <div class="tl-content">
+                                <div class="tl-date">2007–2008</div>
+                                <h4>Especialización en Elaboración, Evaluación y Gerenciamiento de Proyectos</h4>
+                                <p>Centro Paraguayo de Estudios de Desarrollo Económico Social · Proyecto de inversión para la producción de pomelo destinado a la industria.</p>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div><div class="tl-dot"></div></div>
+                            <div class="tl-content">
+                                <div class="tl-date">2001–2008</div>
+                                <h4>Ingeniería Agronómica</h4>
+                                <p>Facultad de Ciencias Agrarias, Universidad Nacional de Asunción · Caracterización ambiental del Departamento de Canindeyú: bases para la planificación del uso de la tierra.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Guillermo Antonio Martínez Godoy · Ing. Agr. Mag. · <a href="mailto:guillermo.martinez.universidad@gmail.com">guillermo.martinez.universidad@gmail.com</a> · Asunción, Paraguay</p>
+</footer>
+
+</body>
+</html>
